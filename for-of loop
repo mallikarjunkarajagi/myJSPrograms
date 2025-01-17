@@ -1,0 +1,53 @@
+
+//For-of with String
+var str1 = 'Mallikarjun';
+var ob1 = {
+    firstname:"Malli",
+    Lastname:"Karajagi"
+}
+
+//Error : TypeError: ob1 is not iterable
+// for(var prop of ob1)
+//     {
+//         console.log(prop);
+//     }
+
+
+console.log(str1.split("").forEach((char) => console.log("K- .:"+char)));
+
+for(var c of str1)
+{
+    console.log(c)
+}
+
+Object.keys(str1).forEach((value)=>
+{
+    console.log("TT " +str1[value]);
+})
+
+
+// for(var i=0;i<str1.length;i++)
+// {
+//     console.log(str1.charAt(i))
+// }
+
+// //For-of with array
+var scores = [40,60,90]
+
+for(var score of scores)
+{
+    console.log(score);
+}
+
+//To also get the index,we use entries method
+
+for(var [index,score] of scores.entries())
+{
+    console.log(index + ' -> '+ score);
+}
+
+Object.entries(scores).forEach(([key,value]) =>
+{
+    console.log(key + ' -> '+ value)
+})
+
